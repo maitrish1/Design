@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+.video-container{
+    position: relative;
+    height: 300%;
+    width: 100vw;
+    z-index: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+video{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.inside-front{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.nav{
+    position: absolute; 
+    right: 0; 
+    width: 70vw;
+    height: 15vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 2.5em;
+    align-items: center;
+}
+.nav li{
+    width: 5em;
+    text-align: center;
+    position: relative;
+}
+.nav li a{
+    font-weight: 700;
+    color:#095d60;
+    text-transform: uppercase;
+}
+.nav li::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.nav li:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav li::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(85, 185, 147);
+    z-index: -1;
+    transition: transform .2s ease;
+}
+.nav li button{
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1em;
+    border:none;
+    background: rgb(250, 133, 153);
+    width: 7em;
+    height: 3em;
+}
+
+.date{
+    height: 5em;
+    /* background-color: brown; */
+    position: absolute;
+    display: flex;
+    top:25em;
+    left:5em;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.date span{
+    color:#095d60;
+}
+.date span:nth-child(1){
+    letter-spacing: 0.5rem;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+.date span:nth-child(2){
+    letter-spacing: 0.5rem;
+    font-size: 1em;
+    font-weight: 700;
+}
+.socials{
+    width: 7em;
+    position: absolute;
+    top: 40em;
+    right: 5em;
+    display: flex;
+    /* background-color: burlywood; */
+    justify-content: space-between;
+}
+.socials li a{
+    font-size: larger;
+    color:#095d60;
+}
+.socials li a:hover{
+    color:white;
+    transition: 0.3s;
+}
