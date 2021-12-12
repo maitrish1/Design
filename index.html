@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Pacifico&display=swap" rel="stylesheet">
     <title>Festival.</title>
 </head>
 <body>
@@ -18,15 +21,15 @@
         <div class="video-container">
             <video src="./vid/king-kong.mp4" playsinline autoplay muted loop></video>
             <div class="inside-front">
-                <div class="nav">
-                    <li><a href="">Live !</a></li>
-                    <li><a href="">Program</a></li>
-                    <li><a href="">Time-Table</a></li>
-                    <li><a href="">Practical</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Sponsors</a></li>
+                <nav class="anim1">
+                    <li><a class="" href="">Live !</a></li>
+                    <li><a class="" href="">Program</a></li>
+                    <li><a class="" href="">Time-Table</a></li>
+                    <li><a class="" href="">Practical</a></li>
+                    <li><a class="" href="">About</a></li>
+                    <li><a class="" href="">Sponsors</a></li>
                     <li><button><a href="">Get tickets</a></button></li>
-                </div>
+                </nav>
 
                 <div class="date">
                     <span>NOV 02 - 04th</span>
@@ -40,10 +43,56 @@
                     <li><a href=""><i class="fab fa-vimeo"></i></a></li>
                 </div>
             </div>
+
+
+            <div class="img1">
+                <img src="./vid/img1.jpg" alt="" class="anim2">
+                <div class="inside-img1 anim3">
+                    <h1>festival.pro</h1>
+                    <button><a href="">More details...</a></button>
+                </div>
+            </div>
+
+            <div class="img2">
+                <img src="./vid/img2.jpg" alt="" class="anim2">
+                <div class="inside-img2 anim3">
+                    <h1>festival.music</h1>
+                    <button><a href="">More details...</a></button>
+                </div>
+            </div>
         </div>   
     </div>
 
 
+
+    
+
+
+
+
+
+
+
+
+    <script>
+        const nav=document.querySelector('nav')
+        const social=document.querySelector('.socials')
+        socialOptions={}
+
+        const socialObserver=new IntersectionObserver(function(entries, socialObserver){
+            entries.forEach(entry=>{
+            //    console.log(entry.target)
+            if(!entry.isIntersecting){
+                nav.classList.add('anim1')
+            } else{
+                nav.classList.remove('anim1')
+            }
+            })
+        }, socialOptions)
+
+
+        socialObserver.observe(social)
+    </script>
 
 
 </body>

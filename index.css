@@ -4,9 +4,13 @@
     text-decoration: none;
     list-style-type: none;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 .video-container{
     position: relative;
-    height: 300%;
+    height: 350vh;
     width: 100vw;
     z-index: 0;
     font-family: 'Source Sans 3', sans-serif;
@@ -15,6 +19,7 @@ video{
     position: absolute;
     object-fit: cover;
     width: 100%;
+    height: 350vh;
     top:0;
     left:0;
     z-index: 1;
@@ -25,37 +30,40 @@ video{
     left: 0;
     z-index: 2;
 }
-.nav{
-    position: absolute; 
-    right: 0; 
-    width: 70vw;
+nav{
+    position: fixed; 
+    width: 100vw;
     height: 15vh;
-    /* background-color: blue; */
     display: flex;
     flex-direction: row;
     justify-content:center;
     gap: 2.5em;
     align-items: center;
+    transition: .8s ease-in-out;
 }
-.nav li{
+.anim1{
+    background: #000a63;
+    transition: .8s ease-in-out;
+}
+nav li{
     width: 5em;
     text-align: center;
     position: relative;
 }
-.nav li a{
+nav li a{
     font-weight: 700;
-    color:#095d60;
+    color:#ffffff;
     text-transform: uppercase;
 }
-.nav li::before{
+nav li::before{
     transform: scaleX(0);
     transform-origin: bottom right;
 }
-.nav li:hover::before{
+nav li:hover::before{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-.nav li::before{
+nav li::before{
     content:"";
     display: block;
     position: absolute;
@@ -65,7 +73,7 @@ video{
     z-index: -1;
     transition: transform .2s ease;
 }
-.nav li button{
+nav li button{
     font-family: 'Source Sans 3', sans-serif;
     font-size: 1em;
     border:none;
@@ -100,8 +108,8 @@ video{
 .socials{
     width: 7em;
     position: absolute;
-    top: 40em;
-    right: 5em;
+    top: 30em;
+    right: 2em;
     display: flex;
     /* background-color: burlywood; */
     justify-content: space-between;
@@ -111,6 +119,99 @@ video{
     color:#095d60;
 }
 .socials li a:hover{
-    color:white;
-    transition: 0.3s;
+    color:black;
+    transition: 0.7s;
+}
+.img1{
+    font-family: 'Source Sans 3', sans-serif;
+    position: absolute;
+    width: 70vw;
+    z-index:1;
+    top:170vh;
+    left: 15vw;
+    display: flex;
+    gap:10em;
+}
+
+.img1 img{
+    width: 25vw;
+}
+.inside-img1{
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    align-items: flex-start;
+    width: 25vw;
+    justify-content: center;
+}
+.inside-img1 h1{
+    font-size: 4em;
+    color: white;
+}
+.inside-img1 span{
+    font-size: 2em;
+}
+.inside-img1 button{
+    background: rgb(250, 133, 153);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Source Sans 3', sans-serif;
+    padding: 0.7em 2em 0.7em 2em;
+    transition: 0.4s ease-in-out;
+}
+.inside-img1 button a{
+     color: black;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.inside-img1 button:hover{
+    color: rgb(250, 133, 153);
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+.img2{
+    font-family: 'Source Sans 3', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    gap:10em;
+    width: 60vw;
+    z-index: 1;
+    top:250vh;
+    right:15vw;
+}
+.img2 img{
+    width: 25vw;
+}
+.inside-img2{
+    display: flex;
+    flex-direction: column;
+    gap:5em;
+    align-items: flex-end;
+    justify-content: center;
+}
+.inside-img2 h1{
+    font-size: 4em;
+    color: white;
+}
+.inside-img2 button{
+    background: rgb(250, 133, 153);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Source Sans 3', sans-serif;
+    padding: 0.7em 2em 0.7em 2em;
+    transition: 0.4s ease-in-out;
+}
+.inside-img2 button a{
+     color: black;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.inside-img2 button:hover{
+    color: rgb(250, 133, 153);
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
 }
