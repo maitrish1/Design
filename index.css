@@ -80,6 +80,11 @@ nav li button{
     background: rgb(250, 133, 153);
     width: 7em;
     height: 3em;
+    /* transition: 0.8 ease-in-out; */
+}
+nav li button:hover{
+    transform: scale(1.1);
+    /* transition: 0.8 ease-in-out; */
 }
 
 .date{
@@ -135,6 +140,12 @@ nav li button{
 
 .img1 img{
     width: 25vw;
+    transition: 0.4s ease-in-out;
+}
+.img1 img:hover{
+    width: 30vw;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
 }
 .inside-img1{
     display: flex;
@@ -215,3 +226,13 @@ nav li button{
     transition: 0.4s ease-in-out;
     transform: scale(1.1);
 }
+/* @keyframes anim2{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
