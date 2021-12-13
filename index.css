@@ -30,6 +30,7 @@ video{
     left: 0;
     z-index: 2;
 }
+
 nav{
     position: fixed; 
     width: 100vw;
@@ -85,6 +86,9 @@ nav li button{
 nav li button:hover{
     transform: scale(1.1);
     /* transition: 0.8 ease-in-out; */
+}
+.burger{
+    display: none;
 }
 
 .date{
@@ -288,5 +292,16 @@ nav li button:hover{
     }
     .video-container video{
         height: 380vh;
+    }
+    .burger{
+        display: block;
+        right: 50px;
+        font-size: 2em;
+    }
+    .not-bruger{
+        display: none;
+    }
+    .nav li span{
+        width: 6em;
     }
 }
