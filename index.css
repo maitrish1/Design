@@ -35,9 +35,9 @@ nav{
     width: 100vw;
     height: 15vh;
     display: flex;
-    flex-direction: row;
-    justify-content:center;
-    gap: 2.5em;
+    /* flex-direction: row; */
+    justify-content:space-evenly;
+    /* gap: 2.5em; */
     align-items: center;
     transition: .8s ease-in-out;
 }
@@ -128,14 +128,17 @@ nav li button:hover{
     transition: 0.7s;
 }
 .img1{
+    /* background-color: blue; */
     font-family: 'Source Sans 3', sans-serif;
     position: absolute;
-    width: 70vw;
+    width: 100vw;
     z-index:1;
     top:170vh;
-    left: 15vw;
+    /* left: 5vw; */
     display: flex;
-    gap:10em;
+    justify-content: center;
+    gap:5em;
+    height: 50vh;
 }
 
 .img1 img{
@@ -152,7 +155,7 @@ nav li button:hover{
     flex-direction: column;
     gap:2em;
     align-items: flex-start;
-    width: 25vw;
+  
     justify-content: center;
 }
 .inside-img1 h1{
@@ -187,11 +190,13 @@ nav li button:hover{
     position: absolute;
     display: flex;
     flex-direction: row-reverse;
-    gap:10em;
-    width: 60vw;
+    gap:5em;
+    width: 100vw;
     z-index: 1;
     top:250vh;
-    right:15vw;
+    right:0;
+    justify-content: center;
+    height: 50vh;
 }
 .img2 img{
     width: 25vw;
@@ -236,3 +241,52 @@ nav li button:hover{
         opacity: 1;
     }
 } */
+
+@media screen and (max-width:800px){
+    /* .nav li{
+        gap:10px;
+    } */
+    .img1{
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        gap: 1em;
+        align-items: center;
+    }
+    .inside-img1{
+        justify-content: center;
+        gap:10px;
+    }
+    .inside-img1 h1{
+        font-size: 3em;
+        color: blue;
+    }
+    .img1 img{
+        height: 80%;
+        width: 50vw;
+    }
+    .img2{
+        
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        gap: 1em;
+        align-items: center;
+        top: 280vh;
+    }
+    .inside-img2 h1{
+        font-size: 3em;
+        color: blue;
+    }
+    .img2 img{
+        height: 80%;
+        width: 50vw;
+    }
+    .inside-img2{
+        justify-content: center;
+        gap:10px;
+    }
+    .video-container video{
+        height: 380vh;
+    }
+}
